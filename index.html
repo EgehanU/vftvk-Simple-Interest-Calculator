@@ -4,13 +4,43 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
+      <div class="mainContainer">
+
         <h1>Simple Interest Calculator</h1>
+        <div class="container">
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        Amount <input type="text"  id="principal">  <br/>
+        Interest Rate <input type="range" min="0" max="100" value="50"  id="interestRate" onchange="updateSlider(this.value)">
+        <span id="sliderText"></span>
+        <br>
 
-        <button onclick="compute()">Compute</button>
+        No. of Years <input list="noOfYears"  id="years" >
+          <datalist id="noOfYears">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10"></option>
+            <option value="11"></option>
+            <option value="12"></option>
+            <option value="13"></option>
+            <option value="14"></option>
+            <option value="15"></option>
+          </datalist>
+
+          <br/>
+
+          <button onclick="compute()" class="calculator">Compute Interest</button>
+          <br><br>
+          <span id="result"></span><br>
+          </div>
+          <p>&#9400; Everyone Can Get Rich</p>
+          <br>
+          </div>
     </body>
 </html>
