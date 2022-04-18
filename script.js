@@ -6,10 +6,5 @@ function compute()
     years = Number.parseFloat(years);
     let targetYear = 2022 + years;
     let gainedAmount = (amount * (rate / 100)) * years;
-    document.getElementById("result").innerHTML = ("If you deposit " + amount + ",\nat an interest rate of " + rate + "%.\nYou will receive an amount of " + gainedAmount + ",\nin year "+ targetYear.);
-}
-function slider(){
-  let sliderValue = document.getElementById("years").value;
-  document.getElementById("sliderText").innerHTML = sliderValue;
-  
+    document.getElementById("result").innerHTML = ("If you deposit " + amount + ",\nat an interest rate of " + rate + "%.\nYou will receive an amount of " + gainedAmount + ",\nin year "+ targetYear);
 }
