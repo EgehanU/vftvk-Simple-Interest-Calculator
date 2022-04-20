@@ -10,8 +10,13 @@ function compute()
       document.getElementById("result").innerHTML = ("If you deposit " + amount + ",\nat an interest rate of " + rate + "%.\nYou will receive an amount of " + gainedAmount + ",\nin year "+ targetYear);
 
     }
-    else if (amount <= 0) {
-      alert("Either no value has been entered or an entry of zero has been made, or a negative number has been used! Please enter a positive number")
+    else if (amount <= 0 || amoun==null) {
+      alert("Enter a positive number!")
+      principal.focus();
     }
 
+}
+function slider(){
+  let slider = document.getElementById("interestRate").value;
+  document.getElementById("sliderPercentage").innerText = slider + "%";
 }

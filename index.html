@@ -1,48 +1,56 @@
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <div class="mainContainer">
 
-        <h1>Simple Interest Calculator</h1>
-        <div class="container">
+<head>
+  <script src="script.js"></script>
+  <meta name="author" author="Egehan Usluer">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-        Amount <input type="text"  id="principal">  <br/>
-        Interest Rate <input type="range" min="0" max="100" value="50"  id="interestRate">
-        <br>
+<body>
+  <div class="mainContainer">
 
-        No. of Years <label for="years"  >
+    <h1>Simple Interest Calculator</h1>
+    <div class="container">
 
-          <select id="years" name="years">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
+      Amount <input type="text" id="principal"> <br />
+      <span>
+
+        Interest Rate <input type="range" value="5" min="1" max="20" id="interestRate" onchange="slider()">
+        <span id="sliderPercentage"></span>
+      </span>
+      <br>
+
+      No. of Years <label for="years">
+
+        <select id="years" name="years">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
 
 
-          </select>
+        </select>
 
-          <br/>
+        <br />
 
-          <button onclick="compute()" class="calculator">Compute Interest</button>
-          <br><br>
-          <span id="result"></span><br>
-          </div>
-          <p>&#9400; Everyone Can Get Rich</p>
-          <br>
-          </div>
-    </body>
+        <button onclick="compute()" class="calculator">Compute Interest</button>
+        <br><br>
+        <span id="result"></span><br>
+    </div>
+    <p>&#9400; Everyone Can Get Rich</p>
+    <br>
+  </div>
+</body>
+
 </html>
